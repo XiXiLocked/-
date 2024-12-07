@@ -19,31 +19,25 @@ python main.py "Trapped"
          字幕备份.part07.rar 2016/0910/33baac336a4c5b0543993757d30f18fd.zip
 畸变第1季第4集（精校） Freakish.S01E04 Freakish.S01E04.Trapped.720p.HULU.WEBRip.AAC2.0.H.264-NTb.zip
          字幕备份.part07.rar 2016/1124/f7e0416205bd267d348e6e876248c24d.zip
-紧急呼救 第1季 第9集【精校】 9-1-1.S01E09 9-1-1.S01E09.zip
-         字幕备份.part08.rar 2018/0320/b57874ca15403edb1a38766d1a6b2d0d.zip
-我制服了魔鬼 I.Trapped.The.Devil I.Trapped.The.Devil.2019.1080p.WEB-DL.DD5.1.H264-FGT.rar
-         字幕备份.part09.rar 2019/0504/3d06292f8a8c9ceb290fd11dcb5531b8.rar
-悬浮聚会 第二季第十集 Light.as.a.Feather.S02E10 Light.as.a.Feather.S02E10.Trapped.as.a.Rat.1080p.AMZN.WEB-DL.DDP2.0.H.264-NTb.zip
-         字幕备份.part01.rar 2020/0428/cdc1e3b7cf028f02f88b23c01d4a4ead.zip
-哈莉·奎茵 第2季第3集 Harley Quinn S02E03 Harley.Quinn.S02E03.Trapped.1080p.DCU.WEB-DL.DDP5.1.H264-NTb.zip
-         字幕备份.part01.rar 2020/0418/8ede21a0b5ad3b0bf4b7ca50e3bf302a.zip
-[呼救无门].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-         字幕备份.part03.rar files/system/misc/subs/other/200904/[呼救无门].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-[鍛兼晳鏃犻棬].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-         字幕备份.part03.rar files/system/misc/subs/other/200904/[鍛兼晳鏃犻棬].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-[閸涘吋鏅抽弮鐘绘，].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-         字幕备份.part03.rar files/system/misc/subs/other/200904/[閸涘吋鏅抽弮鐘绘，].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-[呼救无门].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-         字幕备份.part03.rar files/uploads/files/specialt_name/[呼救无门].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-[鍛兼晳鏃犻棬].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
-         字幕备份.part03.rar files/uploads/files/specialt_name/[鍛兼晳鏃犻棬].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
+......
 [閸涘吋鏅抽弮鐘绘，].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
          字幕备份.part03.rar files/uploads/files/specialt_name/[閸涘吋鏅抽弮鐘绘，].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar
 ```
 
+如果只要几个字幕文件，比如最后一个，那么不用解压全部。可以这样
+```
+unrar e  字幕备份.part03.rar "files/uploads/files/specialt_name/[閸涘吋鏅抽弮鐘绘，].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar" 
+```
+其中的参数 `字幕备份.part03.rar` 和 `files/uploads/files/specialt_name/[閸涘吋鏅抽弮鐘绘，].Trapped.Ashes.2006.Limited.DVDRiP.XviD-iNTiMiD.avi.rar` 就是从上面查询得来的。
 
+## 字幕文件本体
+[百度盘链接，提取码: rrys](https://t.cn/A6mSIYu6)
 
-## 数据库样本
+字幕文件是rar压缩包，分成了10卷。每个rar包里有独立的文件信息，也有拆分的其他9卷的信息。理论上只要不在拆分的边界上的文件，是可以只查找单独的包，不用查全部rar的。
+
+所以可以用上述工具定位到单独的rar，然后只查这几个包。
+
+# 数据库样本
 ```
 sqlite> .tables
 subtitle             subtitle_in_rar    
